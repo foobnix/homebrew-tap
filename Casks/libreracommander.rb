@@ -12,14 +12,15 @@ cask "libreracommander" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "LibreraCommander.app"
 
   # The app isn't notarized yet: clear the download quarantine so macOS opens it.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/LibreraCommander.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/LibreraCommander.app"],
+        writable_paths: ["{{appdir}}/LibreraCommander.app"]
   end
 
   zap trash: [
