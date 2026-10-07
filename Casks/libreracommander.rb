@@ -1,6 +1,6 @@
 cask "libreracommander" do
-  version "1.0.38"
-  sha256 "7ac86e72784b39d5c11fbe3b2398529d604aea47fae7101f2328e7c8989a57a1"
+  version "1.0.39"
+  sha256 "0e2d2d09415924ee35673216f9ebea4b0aef62f988fcdc186f44d9b33dfb3058"
 
   url "https://github.com/foobnix/LibreraCommander-releases/releases/download/v#{version}/LibreraCommander-#{version}.dmg"
   name "LibreraCommander"
@@ -12,6 +12,7 @@ cask "libreracommander" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "LibreraCommander.app"
