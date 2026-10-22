@@ -1,6 +1,6 @@
 cask "libreracommander" do
-  version "1.0.62"
-  sha256 "9bc3508d54bfd6dad926fb05e06863a0cff951fe3b58914628f806a1288d219c"
+  version "1.0.63"
+  sha256 "2e1206a9c2905c3e2f80be3aae5051541ee9c9a973a777c658e93446c6ed153b"
 
   url "https://github.com/foobnix/LibreraCommander-releases/releases/download/v#{version}/LibreraCommander-#{version}.dmg"
   name "LibreraCommander"
